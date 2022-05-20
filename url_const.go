@@ -1,9 +1,5 @@
 package steam_integration
 
-const (
-	httpsScheme = "https"
-)
-
 // hosts
 const (
 	SteamHost    = "steampowered.com"
