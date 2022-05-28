@@ -14,7 +14,14 @@ const (
 
 // paths
 const (
-	iSteamAppsPath = "/ISteamApps"
-	getAppsListV2  = iSteamAppsPath + "/GetAppList/v2"
-	appPath        = "/app"
+	// Steam Web API paths
+	iSteamAppsInterfacePath = "/ISteamApps"
+	getAppsList             = iSteamAppsInterfacePath + "/GetAppList"
+	getAppsListV2           = getAppsList + "/v2"
+	iSteamNewsInterfacePath = "/ISteamNews"
+	getNewsForApp           = iSteamNewsInterfacePath + "/GetNewsForApp"
+	getNewsForAppV2         = getNewsForApp + "/v2"
+
+	// Steam Web site paths
+	appPath = "/app"
 )
