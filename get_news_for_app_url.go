@@ -13,7 +13,10 @@ func NewsForApp(appId uint32) *url.URL {
 		Path:   getNewsForAppV2,
 	}
 
-	u.Query().Add("appid", strconv.Itoa(int(appId)))
+	q := u.Query()
+	q.Add("appid", strconv.Itoa(int(appId)))
+
+	u.RawQuery = q.Encode()
 
 	return u
 }
