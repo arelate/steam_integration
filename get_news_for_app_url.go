@@ -15,7 +15,6 @@ func NewsForApp(appId uint32) *url.URL {
 
 	q := u.Query()
 	q.Add("appid", strconv.Itoa(int(appId)))
-
 	u.RawQuery = q.Encode()
 
 	return u
