@@ -27,20 +27,23 @@ type Author struct {
 }
 
 type Review struct {
-	RecommendationId         string `json:"recommendationid"`
-	Author                   Author `json:"author"`
-	Language                 string `json:"language"`
-	Review                   string `json:"review"`
-	TimestampCreated         int    `json:"timestamp_created"`
-	TimestampUpdated         int    `json:"timestamp_updated"`
-	VotedUp                  bool   `json:"voted_up"`
-	VotesUp                  int    `json:"votes_up"`
-	VotesFunny               int    `json:"votes_funny"`
-	WeightedVoteScore        string `json:"weighted_vote_score"`
-	CommentCount             int    `json:"comment_count"`
-	SteamPurchase            bool   `json:"steam_purchase"`
-	ReceivedForFree          bool   `json:"received_for_free"`
-	WrittenDuringEarlyAccess bool   `json:"written_during_early_access"`
+	RecommendationId string `json:"recommendationid"`
+	Author           Author `json:"author"`
+	Language         string `json:"language"`
+	Review           string `json:"review"`
+	TimestampCreated int    `json:"timestamp_created"`
+	TimestampUpdated int    `json:"timestamp_updated"`
+	VotedUp          bool   `json:"voted_up"`
+	VotesUp          int    `json:"votes_up"`
+	VotesFunny       int    `json:"votes_funny"`
+	//BUG: Steam weighted_vote_score data contains values like "0.123456789" as well as 0 (no quotes)
+	//which means we can't use either string (second value will fail), nor number (first value will fail)
+	//skipping it for the time being
+	//WeightedVoteScore        string `json:"weighted_vote_score"`
+	CommentCount             int  `json:"comment_count"`
+	SteamPurchase            bool `json:"steam_purchase"`
+	ReceivedForFree          bool `json:"received_for_free"`
+	WrittenDuringEarlyAccess bool `json:"written_during_early_access"`
 }
 
 type ReviewScoreDescGetter interface {
