@@ -42,3 +42,11 @@ type Review struct {
 	ReceivedForFree          bool   `json:"received_for_free"`
 	WrittenDuringEarlyAccess bool   `json:"written_during_early_access"`
 }
+
+type ReviewScoreDescGetter interface {
+	GetReviewScoreDesc() string
+}
+
+func (ar *AppReviews) GetReviewScoreDesc() string {
+	return ar.QuerySummary.ReviewScoreDesc
+}
