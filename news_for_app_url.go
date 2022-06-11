@@ -5,11 +5,11 @@ import (
 	"strconv"
 )
 
-//https://partner.steamgames.com/doc/webapi/ISteamNews#GetNewsForApp
 func NewsForApp(appId uint32) *url.URL {
+	//https://partner.steamgames.com/doc/webapi/ISteamNews#GetNewsForApp
 	u := &url.URL{
 		Scheme: httpsScheme,
-		Host:   ApiSteamHost,
+		Host:   ApiHost,
 		Path:   getNewsForAppV2,
 	}
 

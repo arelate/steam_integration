@@ -4,11 +4,11 @@ import (
 	"net/url"
 )
 
-// https://partner.steamgames.com/doc/webapi/ISteamApps#GetAppList
 func AppListUrl() *url.URL {
+	// https://partner.steamgames.com/doc/webapi/ISteamApps#GetAppList
 	return &url.URL{
 		Scheme: httpsScheme,
-		Host:   ApiSteamHost,
+		Host:   ApiHost,
 		Path:   getAppsListV2,
 	}
 }

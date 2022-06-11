@@ -7,8 +7,9 @@ const (
 
 // hosts
 const (
-	SteamHost          = "steampowered.com"
-	ApiSteamHost       = "api." + SteamHost
+	SteamPoweredHost   = "steampowered.com"
+	StoreHost          = "store." + SteamPoweredHost
+	ApiHost            = "api." + SteamPoweredHost
 	SteamCommunityHost = "steamcommunity.com"
 )
 
@@ -21,7 +22,8 @@ const (
 	iSteamNewsInterfacePath = "/ISteamNews"
 	getNewsForApp           = iSteamNewsInterfacePath + "/GetNewsForApp"
 	getNewsForAppV2         = getNewsForApp + "/v2"
+	getAppReviewsPath       = "/appreviews/"
 
-	// Steam Web site paths
+	// Steam Website paths
 	appPath = "/app"
 )
