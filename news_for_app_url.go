@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-func NewsForApp(appId uint32) *url.URL {
+func NewsForAppUrl(appId uint32) *url.URL {
 	//https://partner.steamgames.com/doc/webapi/ISteamNews#GetNewsForApp
 	u := &url.URL{
 		Scheme: httpsScheme,
