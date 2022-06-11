@@ -16,13 +16,13 @@ const (
 // paths
 const (
 	// Steam Web API paths
-	iSteamAppsInterfacePath = "/ISteamApps"
-	getAppsList             = iSteamAppsInterfacePath + "/GetAppList"
-	getAppsListV2           = getAppsList + "/v2"
-	iSteamNewsInterfacePath = "/ISteamNews"
-	getNewsForApp           = iSteamNewsInterfacePath + "/GetNewsForApp"
-	getNewsForAppV2         = getNewsForApp + "/v2"
-	getAppReviewsPath       = "/appreviews/"
+	iSteamAppsInterfacePath   = "/ISteamApps"
+	getAppsList               = iSteamAppsInterfacePath + "/GetAppList"
+	getAppsListV2             = getAppsList + "/v2"
+	iSteamNewsInterfacePath   = "/ISteamNews"
+	getNewsForApp             = iSteamNewsInterfacePath + "/GetNewsForApp"
+	getNewsForAppV2           = getNewsForApp + "/v2"
+	getAppReviewsPathTemplate = "/appreviews/{appId}?json=1"
 
 	// Steam Website paths
 	appPath = "/app"

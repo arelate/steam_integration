@@ -3,6 +3,7 @@ package steam_integration
 import (
 	"net/url"
 	"strconv"
+	"strings"
 )
 
 func AppReviewsUrl(appId uint32) *url.URL {
@@ -10,6 +11,6 @@ func AppReviewsUrl(appId uint32) *url.URL {
 	return &url.URL{
 		Scheme: httpsScheme,
 		Host:   StoreHost,
-		Path:   getAppReviewsPath + strconv.Itoa(int(appId)),
+		Path:   strings.Replace(getAppReviewsPathTemplate, "{appId}", strconv.Itoa(int(appId)), -1),
 	}
 }
