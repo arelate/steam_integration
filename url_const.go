@@ -1,5 +1,7 @@
 package steam_integration
 
+import "net/url"
+
 // scheme
 const (
 	httpsScheme = "https"
@@ -27,3 +29,5 @@ const (
 	// Steam Website paths
 	appPath = "/app"
 )
+
+type SteamUrlFunc func(appId uint32) *url.URL
