@@ -24,7 +24,7 @@ const (
 	iSteamNewsInterfacePath   = "/ISteamNews"
 	getNewsForApp             = iSteamNewsInterfacePath + "/GetNewsForApp"
 	getNewsForAppV2           = getNewsForApp + "/v2"
-	getAppReviewsPathTemplate = "/appreviews/{appId}?json=1"
+	getAppReviewsPathTemplate = "/appreviews/{appId}"
 
 	// Steam Website paths
 	appPath = "/app"
