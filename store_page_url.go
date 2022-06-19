@@ -6,10 +6,10 @@ import (
 	"strconv"
 )
 
-func SteamCommunityUrl(appId uint32) *url.URL {
+func StorePageUrl(appId uint32) *url.URL {
 	return &url.URL{
 		Scheme: httpsScheme,
-		Host:   SteamCommunityHost,
+		Host:   StoreHost,
 		Path:   path.Join(appPath, strconv.Itoa(int(appId))),
 	}
 }
